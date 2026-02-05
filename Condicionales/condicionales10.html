@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales 10</title>
+    <script>
+        let edad, resultado;
+        edad = prompt("Edad?", 0);
+        if (edad > 1 && edad < 120) {
+            if (edad >= 18) {
+                resultado = "Sí tiene permiso de acceso.";
+            }
+            else {
+                resultado = "No tiene permiso de acceso.";
+            }
+        }
+
+        else {
+            resultado = "No tiene permiso de acceso."
+        }
+
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write(`<h3>${resultado} </h3> `);
+    </script>
+</body>
+
+</html>

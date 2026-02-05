@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales 9</title>
+    <script>
+        let fp, edad, resultado;
+        fp = prompt("Eres alumno de FP?", "no");
+        edad = prompt("Edad?", 0);
+        if (fp == "si") {
+            if (edad >= 18) {
+                resultado = "Bienvenid@";
+            }
+            else {
+                resultado = "Sin acceso.";
+            }
+        }
+
+        else {
+            resultado = "Sin acceso."
+        }
+
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write(`<h3>${resultado} </h3> `);
+    </script>
+</body>
+
+</html>
