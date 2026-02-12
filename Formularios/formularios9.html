@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formularios 9</title>
+    <script>
+        function calcularMedia() {
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let peso1 = parseFloat(document.getElementById("peso1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let peso2 = parseFloat(document.getElementById("peso2").value);
+
+            if (peso1 + peso2 !== 100) {
+                document.getElementById("resultado").innerHTML =
+                    "Los porcentajes deben sumar 100%.";
+                return;
+            }
+
+            let media = (nota1 * peso1 / 100) + (nota2 * peso2 / 100);
+
+            document.getElementById("resultado").innerHTML =
+                "La nota media ponderada es: " + media.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Calculo de Notas</h2>
+
+    <form id="Form1">
+        <label>Nota:</label>
+        <input type="number" id="nota1" step="0.01" required>
+        <br><br>
+
+        <label>Porcentaje:</label>
+        <input type="number" id="peso1" step="0.01" required>
+        <br><br>
+
+        <label>Nota:</label>
+        <input type="number" id="nota2" step="0.01" required>
+        <br><br>
+
+        <label>Porcentaje:</label>
+        <input type="number" id="peso2" step="0.01" required>
+        <br><br>
+
+        <button type="button" onclick="calcularMedia()">Calcular</button>
+    </form>
+
+    <h3 id="resultado"></h3>
+</body>
+
+</html>

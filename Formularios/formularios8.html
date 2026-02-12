@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formularios 8</title>
+    <script>
+        function pasarAFarenheit() {
+            const grado = parseFloat(document.formulario.numero.value);
+            let farenheit = (grado * 1.8 + 32).toFixed(2);
+            document.getElementById("resultado").innerHTML =
+                `${grado} ºC en Farenheit es: ${farenheit} ºF <br>`
+        }
+        function pasarACelsius() {
+            const grado2 = parseFloat(document.formulario2.numero2.value);
+            let celsius = ((grado2 - 32) * 5 / 9).toFixed(2);
+            document.getElementById("resultado2").innerHTML =
+                `${grado2} ºF en Celsius es: ${celsius} ºC <br>`
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Pasando a Farenheit</h2>
+
+    <form name="formulario" onsubmit="event.preventDefault(); pasarAFarenheit();">
+        <label for="numero">Introduce una temperatura en Celsius:</label>
+        <input type="number" id="numero" required>
+        <button type="submit">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <form name="formulario2" onsubmit="event.preventDefault(); pasarACelsius();">
+        <label for="numero2">Introduce una temperatura en Farenheit:</label>
+        <input type="number" id="numero2" required>
+        <button type="submit">Calcular</button>
+    </form>
+    <p id="resultado2"></p>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formularios 4</title>
+    <script>
+        function cuadrado() {
+            const dato = parseFloat(document.formulario.numero.value);
+            let resultado = (dato * dato);
+            document.getElementById("resultado").innerHTML =
+                `El cuadrado de ${dato} es: ${resultado} <br>`
+        }
+
+        function cubo() {
+            const dato = parseFloat(document.formulario.numero.value);
+            let resultadoc = Math.pow(dato, 3);
+            document.getElementById("resultadoc").innerHTML =
+                `El cubo de ${dato} es: ${resultadoc} <br>`
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Cálculo del cuadrado y cubo</h2>
+
+    <form name="formulario" onsubmit="event.preventDefault(); cuadrado(); cubo();">
+        <label for="numero">Introduce un número:</label>
+        <input type="number" id="numero" required>
+        <button type="submit">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <p id="resultadoc"></p>
+</body>
+
+</html>
